@@ -20,7 +20,7 @@
         }
 
         public function setBrand($brand) {
-            $this->id = $brand;
+            $this->brand = $brand;
         }
 
         public function getKm() {
@@ -28,7 +28,7 @@
         }
 
         public function setKm($km) {
-            $this->km = $km;
+            $this->km = intval($km);
         }
 
         public function getColor() {
@@ -40,7 +40,7 @@
         }
     }
 
-    interface CarDAO {
+    interface CarDAOInterface {
 
         public function create(Car $car);
         public function findAll();
